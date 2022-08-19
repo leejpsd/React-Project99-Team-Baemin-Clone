@@ -1,9 +1,10 @@
 import React from "react";
+import Test from "../images/main_arrow_after";
 
 const Main = () => {
     return (
         <>
-            <div>Main</div>
+            <img src={Test} alt="" />
         </>
     )
 }
