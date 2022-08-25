@@ -35,15 +35,16 @@ const Header = () => {
 
 
     // nav scroll css
-    const [scrollNav, setScrollNav] = useState(false);
+    const [scrollNav, setScrollNav] = useState(true);
+
     const ChangeColor = () => {
         if (window.scrollY <= 100) {
             setScrollNav(true)
         } else {
             setScrollNav(false)
         }
-        window.addEventListener('scroll', ChangeColor);
     }
+    window.addEventListener('scroll', ChangeColor);
 
 
     return (
@@ -81,6 +82,8 @@ const Header = () => {
 };
 
 const HeaderWrap = styled.div`
+    transition: 0.4s;
+    z-index: 999;
     width: 100%;
     position: fixed;
     display: flex;
