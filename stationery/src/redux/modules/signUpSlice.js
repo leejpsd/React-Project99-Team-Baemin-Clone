@@ -17,7 +17,7 @@ const register = (payload) => {
 
     axios({
         method: "post",
-        url: 'http://hosung.shop/api/v1/signup',
+        url: 'https://hosung.shop/api/v1/signup',
         // headers: { 'Content-Type': 'application/json' },
         data: userData,
     })
