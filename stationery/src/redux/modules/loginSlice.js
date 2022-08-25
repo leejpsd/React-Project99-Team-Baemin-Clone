@@ -6,7 +6,7 @@ export const __loginUsers = createAsyncThunk(
     async (payload, thunkAPI) => {
 
         try {
-            const data = await axios.post("http://hosung.shop/api/v1/login", {
+            const data = await axios.post("https://hosung.shop/api/v1/login", {
                 username: payload.id,
                 password: payload.pw,
             })
