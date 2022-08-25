@@ -83,7 +83,7 @@ const Main = () => {
   const [goods, setGoods] = useState([]);
 
   const goodsAPI = () => {
-    const url = "http://hosung.shop/api/v1/products/mainitems";
+    const url = "https://hosung.shop/api/v1/products/mainitems";
     axios
       .get(url)
       .then(function (response) {
