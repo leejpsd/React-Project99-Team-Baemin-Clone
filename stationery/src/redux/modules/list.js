@@ -5,7 +5,7 @@ export const getList = createAsyncThunk(
   "list/getList",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://hosung.shop/api/v1/products")
+      const data = await axios.get("https://hosung.shop/api/v1/products")
 
       // .then((response) => {
       //   console.log(response.data.data);
@@ -21,7 +21,7 @@ export const getListLv = createAsyncThunk(
   "listLv/getListLv",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://hosung.shop/api/v1/products?category=리빙")
+      const data = await axios.get("https://hosung.shop/api/v1/products?category=리빙")
 
       // .then((response) => {
       //   console.log(response.data.data);
@@ -36,7 +36,7 @@ export const getListSt = createAsyncThunk(
   "listSt/getListSt",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://hosung.shop/api/v1/products?category=문구")
+      const data = await axios.get("https://hosung.shop/api/v1/products?category=문구")
 
       // .then((response) => {
       //   console.log(response.data.data);
