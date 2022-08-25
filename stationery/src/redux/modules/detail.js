@@ -5,7 +5,7 @@ export const getDetail = createAsyncThunk(
   "detail/getDetail",
   async (id, thunkAPI) => {
     try {
-      const data = await axios.get(`http://hosung.shop/api/v1/products/${id}`)
+      const data = await axios.get(`https://hosung.shop/api/v1/products/${id}`)
       //       .then((response) => {
       //   console.log(response.data.data);
       // });
