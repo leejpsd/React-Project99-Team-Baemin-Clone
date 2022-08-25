@@ -24,7 +24,7 @@ export const postComment = createAsyncThunk(
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: 'BEARER eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFWFBJUkVEX0RBVEUiOjE2NjE1Njk3NTQsImlzcyI6IklTUyIsIlVTRVJfTkFNRSI6IndpbnNvbWVkMzIifQ.RBII4PapUdlyRjbvAYLtVtvrD6AWOq39GF9fS5qUr7g'
+          Authorization: window.localStorage.getItem("token"),
         },
       })
       //   .then((response) => {
@@ -49,7 +49,7 @@ export const editComment = createAsyncThunk(
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: 'BEARER eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFWFBJUkVEX0RBVEUiOjE2NjE1Njk3NTQsImlzcyI6IklTUyIsIlVTRVJfTkFNRSI6IndpbnNvbWVkMzIifQ.RBII4PapUdlyRjbvAYLtVtvrD6AWOq39GF9fS5qUr7g'
+          Authorization: window.localStorage.getItem("token"),
         },
       })
       //   .then((response) => {
@@ -71,7 +71,7 @@ export const deleteComment = createAsyncThunk(
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: 'BEARER eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFWFBJUkVEX0RBVEUiOjE2NjE1Njk3NTQsImlzcyI6IklTUyIsIlVTRVJfTkFNRSI6IndpbnNvbWVkMzIifQ.RBII4PapUdlyRjbvAYLtVtvrD6AWOq39GF9fS5qUr7g'
+          Authorization: window.localStorage.getItem("token"),
         },
       })
       //   .then((response) => {

@@ -4,7 +4,6 @@ import axios from 'axios';
 export const __loginUsers = createAsyncThunk(
     "login/loginUsers",
     async (payload, thunkAPI) => {
-        console.log(payload)
 
         try {
             const data = await axios.post("http://hosung.shop/api/v1/login", {
@@ -19,10 +18,12 @@ export const __loginUsers = createAsyncThunk(
             //     );
             //     console.log(response)
             // });
-            // console.log(data.headers.authorization)
+            // // console.log(data.headers.authorization)
             // if (Response.status === 200 || Response.status === 201) {
             window.localStorage.setItem(
                 "token", data.headers.authorization)
+            window.localStorage.setItem(
+                "id", data.data.data.username)
             alert('로그인 성공')
             window.location.replace('/')
             return thunkAPI.fulfillWithValue(data.data.data.username);

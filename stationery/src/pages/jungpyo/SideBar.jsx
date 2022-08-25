@@ -1,18 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const SideBar = ({ visibleHandler }) => {
+  const navigate = useNavigate();
+
+  const user = window.localStorage.getItem("id");
+
   return (
     <>
       <HiddenNav>
         <HiddenNavBar>
           <HiddenHeader>
             <h2>
-              앗!
+              {user == null ? "앗!" : null}
               <br />
-              <a>
-                로그인이필요해요
-                <div> </div>
+              <a
+                onClick={() => {
+                  navigate(`/login`);
+                  window.scrollTo(0, 0);
+                }}
+              >
+                {user == null ? "로그인이필요해요" : user}
+                {user == null ? null : "님"}
+                {user == null ? <div> </div> : null}
               </a>
             </h2>
           </HiddenHeader>
@@ -26,7 +38,7 @@ const SideBar = ({ visibleHandler }) => {
                 <a>쉿! 비밀이야 내 마음 속 원픽은...</a>
               </li>
               <li>
-                <a >양자택일 당신의 선택은?</a>
+                <a>양자택일 당신의 선택은?</a>
               </li>
               <li>
                 <a>왜 갑티슈를 만들었을까?</a>
@@ -35,15 +47,13 @@ const SideBar = ({ visibleHandler }) => {
             <h2 style={{ marginTop: "40px" }}>카테고리</h2>
             <ul>
               <li>
-                <a href="">전체보기</a>
+                <a>전체보기</a>
               </li>
               <li>
-                <a href="" style={{ color: "rgb(42, 193, 188)" }}>
-                  문구
-                </a>
+                <a>문구</a>
               </li>
               <li>
-                <a >리빙</a>
+                <a>리빙</a>
               </li>
               <li>
                 <a>책/매거진F</a>

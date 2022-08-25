@@ -14,7 +14,8 @@ const Goods = () => {
   const navigate = useNavigate();
 
   const { list } = useSelector((state) => state.list);
-  console.log(list);
+
+  const login = window.localStorage.getItem("id");
 
   const [visible, setVisible] = useState(false);
 
@@ -35,7 +36,12 @@ const Goods = () => {
         <Header>
           <NavBox>
             <Logo>
-              <LogoLink></LogoLink>
+              <LogoLink
+                onClick={() => {
+                  navigate(`/`);
+                  window.scrollTo(0, 0);
+                }}
+              ></LogoLink>
             </Logo>
             <NavBar>
               <ul>
@@ -46,7 +52,26 @@ const Goods = () => {
                   <Basket></Basket>
                 </li>
                 <LoginBtn>
-                  <a>로그인</a>
+                  {login == null ? (
+                    <a
+                      onClick={() => {
+                        navigate(`/login`);
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      로그인
+                    </a>
+                  ) : (
+                    <a
+                      onClick={() => {
+                        window.localStorage.removeItem("id");
+                        window.location.reload();
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      로그아웃
+                    </a>
+                  )}
                 </LoginBtn>
                 <li>
                   <Burger onClick={() => visibleHandler()}></Burger>
@@ -547,7 +572,8 @@ const SelectList = styled.div`
     display: flex;
     flex-direction: column;
     li {
-      width: 100%;
+      width: 120px;
+      margin-left: -30px;
       min-height: 49px;
       padding: 10px 16px;
       font-size: inherit;
