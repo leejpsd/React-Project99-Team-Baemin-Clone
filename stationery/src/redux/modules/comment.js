@@ -5,7 +5,7 @@ export const getComment = createAsyncThunk(
   "comment/getComment",
   async (id, thunkAPI) => {
     try {
-      const data = await axios.get(`http://hosung.shop/api/v1/review/${id}`)
+      const data = await axios.get(`https://hosung.shop/api/v1/review/${id}`)
       //       .then((response) => {
       //   console.log(response);
       // });
@@ -20,7 +20,7 @@ export const postComment = createAsyncThunk(
   "comment/postComment",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.post(`http://hosung.shop/api/v1/review/${payload.id}`, {content:payload.content},
+      const data = await axios.post(`https://hosung.shop/api/v1/review/${payload.id}`, {content:payload.content},
       {
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export const editComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     console.log(payload)
     try {
-      const data = await axios.put(`http://hosung.shop/api/v1/review/${payload.id}`, 
+      const data = await axios.put(`https://hosung.shop/api/v1/review/${payload.id}`, 
       {
         content:payload.content,
       },
@@ -67,7 +67,7 @@ export const deleteComment = createAsyncThunk(
   async (id, thunkAPI) => {
     console.log(id)
     try {
-      const data = await axios.delete(`http://hosung.shop/api/v1/review/${id}`,
+      const data = await axios.delete(`https://hosung.shop/api/v1/review/${id}`,
       {
         headers: {
           "Content-Type": "application/json",
