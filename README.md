@@ -18,6 +18,7 @@ https://youtu.be/tmesR0lmRkw
 
 ## 🏆 팀 구성
 | 이름	| 포지션 |
+|---|---|
 | 이호재 | Back-end |
 | 한호성	| Back-end |
 | 장창균 | Back-end 
@@ -26,6 +27,7 @@ https://youtu.be/tmesR0lmRkw
 | 이중표 | Front-end |
 
 ## 🛠 주요기술
+<div>
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
 <img src="https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white">
 <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> 
@@ -37,9 +39,11 @@ https://youtu.be/tmesR0lmRkw
 <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white">
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+</div>
 
 ## 👥 역할분담
 |이름 | 페이지 | api | 기능 |
+|---|---|---|---|
 |조다솜| 로그인 | post | ---|
 |---| 회원가입 | post|---|
 |---| 메인페이지 |---|---|
